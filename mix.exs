@@ -1,7 +1,7 @@
 defmodule Duckdbex.MixProject do
   use Mix.Project
 
-  @version "0.2.6"
+  @version "0.2.7"
   @duckdb_version "0.9.2"
 
   def project do
@@ -23,7 +23,7 @@ defmodule Duckdbex.MixProject do
         "https://github.com/maxohq/duckdbex/releases/download/v#{@version}/@{artefact_filename}",
       make_precompiler_filename: "duckdb_nif",
       make_precompiler_nif_versions: [
-        versions: ["2.15", "2.16"],
+        versions: ["2.15", "2.16", "2.17"],
         availability: &target_available_for_nif_version?/2
       ],
       cc_precompiler: [cleanup: "clean"],
